@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+    <legend> enter values</legend>
+
+        <input type="text"  id="email"> <br> <br>
+        <input type="text"  id="password">
+        <input type="button" value="submit id and password" onclick="storeValueforLogin()">
+    </fieldset>
+    <fieldset>
+<legend>local storage</legend>
+<div id="keyValueHolder"></div>
+</fieldset>
+
+
+</body>
+<script>
+let get1 = document.getElementById('email');
+let get2 = document.getElementById('password');
+let get3 = document.getElementById('keyValueHolder');
+
+console.log(   Boolean(localStorage.key(0))   );
+if(  Boolean(localStorage.key(0))  ){
+    for (let i = 0 ; i < localStorage.length ; i++){
+    let getkeys = localStorage.key(i);          
+    let getValues = localStorage.getItem(getkeys);
+    get3.innerHTML += `${getkeys} : ${getValues} <br />`;
+}
+}
+
+
+// console.log( Boolean(   localStorage.keys ));
+
+function storeValueforLogin(){
+    let value1= get1.value;
+    let value2= get2.value;
+
+    if (value1 && value2){
+        localStorage.setItem(value1 , value2)
+     
+    get3.innerHTML = ""
+        for (let i = 0 ; i < localStorage.length ; i++){
+    let getkeys = localStorage.key(i);          
+    let getValues = localStorage.getItem(getkeys);
+    get3.innerHTML += `${getkeys} : ${getValues} <br />`;
+
+    
+    
+    
+    
+    
+    }
+    
+    get1.value = "";
+    get2.value = "";
+    
+}
+
+
+
+
+
+
+}
+
+localStorage.clear();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="local-Storage.js"></script>
+
+</html>
