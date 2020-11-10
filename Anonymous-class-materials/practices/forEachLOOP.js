@@ -57,11 +57,11 @@ console.log(num);
 
 // todo ; DONE 
 // * working code
-// function squaringAlert(){
-//   console.log('i have been clicked')
-// }
-// let allDiv = document.getElementsByClassName('childOFDiv');
-// let allDivArray = Array.from(allDiv)
-// allDivArray.forEach(square => {
-//     square.setAttribute('onclick' , 'squaringAlert()')
-// });
+function squaringAlert(){
+  console.log('i have been clicked')
+}
+let allDiv = document.getElementsByClassName('childOFDiv');
+let allDivArray = Array.from(allDiv)
+allDivArray.forEach(square => {
+    square.setAttribute('onclick' , 'squaringAlert()')
+});

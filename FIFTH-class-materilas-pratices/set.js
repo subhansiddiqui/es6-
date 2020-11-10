@@ -46,6 +46,25 @@ let setTBH = setValueCheck.values();
 console.log(setTBH)
 console.log(setValueCheck);
 // console.log(setTBH.next().value);
-console.log(arraytoCOPY[0] === setTBH.next().value);
+console.log(setTBH.next().value === arraytoCOPY[0]);
 arraytoCOPY[0] = {name : 'subhan' , age : 18};
 console.log(setValueCheck);
+
+//* revision
+console.log('revision starts from here !');
+let aNewArray = [1,2,3,4,5,6]
+let aNewSet = new Set(); //* only iterates the first element if we miss [].and that too if it's a string 
+console.log(aNewSet);
+aNewSet = new Set([...aNewArray])
+console.log(aNewSet);
+aNewSet.has(6)? console.log('it has a value 6 in it') :  aNewSet.add(6);
+console.log(aNewSet.size === 6 ? 'there are six value  values in the set starting from 1' : 'there are more or less values than six'); 
+aNewSet.add(7);
+aNewSet.delete(7);
+aNewSet.has(7) ? console.log(aNewSet) : aNewSet.add(7) , console.log(aNewSet);
+aNewSet.forEach(vlauesINSIDE => console.log(`hey ${vlauesINSIDE}`));
+aNewSet.map(values => values + 2)
+
+
+
+

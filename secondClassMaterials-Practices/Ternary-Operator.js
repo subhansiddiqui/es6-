@@ -5,13 +5,13 @@ let averageAge = 15 ,
     averageHeight = 5.9 + ' ft';
 console.log(averageAge , averageHeight);
 averageAge > 16 ? averageHeight === false? console.log('you pass the both criteria') : console.log('pass') : averageAge < 16  ? console.log('fail') : console.log('not fail');
-// for (let i = 1; i < 101; i++) {
-//     let sound = i % 15 === 0 ?
-//       'fizzbuzz' : i % 5 === 0 ?
-//        'buzz' : i % 3 === 0 ?
-//        'fizz' : i;    
-//      console.log(sound)  
-//    }
+for (let i = 1; i < 101; i++) {
+    let sound = i % 15 === 0 ?
+      'fizzbuzz' : i % 5 === 0 ?
+       'buzz' : i % 3 === 0 ?
+       'fizz' : i;    
+     console.log(sound)  
+   }
 
 
 

@@ -28,4 +28,4 @@ const anotherMaping = objectWithinArray.map(function(elements) {
 },{
     address : 'karachi'
 });
-console.log(anotherMaping)
+console.log(anotherMaping);

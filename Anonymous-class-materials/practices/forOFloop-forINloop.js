@@ -7,7 +7,7 @@ let arr = [1 , 2 , 3 , 4 ,5 ,6 , 7];
 //* NEW way 
 for(let index of arr.reverse()){
     console.log(index);
-}1
+}
 let objForIN = {
      name : 'subhan',
      age : 17,
