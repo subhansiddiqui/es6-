@@ -5,6 +5,9 @@ let body = document.getElementsByTagName('body');
 console.log(body)
 body[0].appendChild(parent);
 function createRainbow(){
+    let button = document.getElementById('button');
+    button.removeAttribute('onclick');
+
 setTimeout(Red , 1000);
 setTimeout(Orange , 2000);
 setTimeout(Yellow , 3000);
@@ -12,6 +15,8 @@ setTimeout(Blue , 4000);
 
 }
  function Red(){
+
+
         let create = document.createElement('div')
         create.setAttribute('id' , 'red');
         create.style.width = '100%';
