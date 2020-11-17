@@ -59,3 +59,43 @@ Promise.all([...arrayWithAllPromises]).then(val => console.log(val)).catch(err =
 // todo 
 //* 1.promises revision and concept ensurance 
 //* 2. async await 
+
+let userLeft = false ;
+let userPauseVideo = false;
+
+//* promise way doing the task
+// function userChecker(){
+//     return new Promise (  (resolve , reject) =>  {
+        
+//         if (userLeft){
+//           reject('the user has left')
+//         }
+//         else if (userPauseVideo){
+//          reject('user has not left but has pause the video')
+//         }
+//         else{
+//         resolve('user is enjoying');
+//         }
+//     }       );
+    
+//     }
+//     userChecker()
+//     .then(  (messageFromPromise) => console.log(messageFromPromise)  )
+//     .catch( (errorFromPromise) => console.log(errorFromPromise) );
+
+ // * call back task 
+
+// function userChecker(callBack , errorCallBack){
+//     if (userLeft){
+//       errorCallBack()
+//     }
+//     else if (userPauseVideo){
+//       errorCallBack('user has not left but has pause the video')
+//     }
+//     else{
+//         callBack('user is enjoying');
+//     }
+// }
+// userChecker(  (message) => console.log(message)
+
+// ,(error) => console.log(error) );
