@@ -8,8 +8,26 @@ let arrayFrom = array.map(VALUES => {
 });
 
 console.log(arrayFrom);
-array.map(values => values * values);
+let arrayOBJ = [{user : 'subhan'  } , {user : 'haseeb'  }];
+console.log(arrayOBJ)
+arrayOBJ.map( items => {
+    items.nationality = 'pakistan'
+});
+array.map((values , indexes) => { 
+    values[indexes] = values + 1
+});
 console.log(array);
+// * from stackOverflow  
+// const arrays = [
+//     1, 2, 3
+//   ]
+
+//   arrays.map((item, k) => {
+//     array[k] = item + 1
+//   })
+  
+//   console.log(arrays)
+//*
 
 let consolingArray = array.map(items => console.log(items * 2));
 console.log(consolingArray);

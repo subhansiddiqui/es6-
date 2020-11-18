@@ -9,8 +9,46 @@ async function fetching(url){
     });
 
 }
-fetching('https://jsonplaceholder.typicode.com/users')
+// fetching('https://jsonplaceholder.typicode.com/users');
 
+let postNUserFetch = async () => {
+        let postAwait = await fetch('https://jsonplaceholder.typicode.com/posts').then( response => response.json() )
+        .catch(errorPost =>  ('getting post got this error' , errorPost ) );
+
+        let usersAwait = await fetch('https://jsonplaceholder.typicode.com/users').then(response => response.json())
+        .catch(errUser => ('getting user got this error ' , errUser) );
+
+        let iterator = 0;
+
+        let userNtitle = postAwait.map( (element , indexes) => {
+
+            return   {
+                title : element.title
+     
+
+        }  
+
+    });
+//* new
+    usersAwait.map( (element , indexes ) => {
+       return element.title = userNtitle[indexes].title 
+    });
+
+//*traditional
+// for (let i = 0 ; i < usersAwait.length ; i++){
+//     usersAwait[i].title = userNtitle[i].title
+// }
+//*
+console.log(usersAwait)
+
+        console.log(userNtitle);
+        // console.log('posts :' , postAwait , 'users' , usersAwait);
+        
+
+
+    }
+
+postNUserFetch();
 
 
 
